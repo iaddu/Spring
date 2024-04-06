@@ -1,4 +1,4 @@
-package com.springcore;
+package com.springcore.primitive;
 
 import java.util.List;
 
