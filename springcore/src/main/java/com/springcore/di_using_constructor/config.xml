@@ -1,0 +1,48 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:c="http://www.springframework.org/schema/c"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-3.0.xsd"
+	>
+	
+	<bean class="com.springcore.di_using_constructor.Address" name="address1">
+		<constructor-arg>
+			<value>2</value>
+		</constructor-arg>
+		<constructor-arg>
+			<value>AlexenderLane</value>
+		</constructor-arg>
+		<constructor-arg>
+			<value>Berlin</value>
+		</constructor-arg>
+		</bean>
+<bean class="com.springcore.di_using_constructor.Address" name="address2">
+<constructor-arg index="0" value="21"/>
+<constructor-arg index="1" value="SophiaLane"/>
+<constructor-arg index="2" value="Rio"/>
+		</bean>
+<bean class="com.springcore.di_using_constructor.Address" name="address3" 
+c:houseno="35" c:street="TorioAdda" c:city="hong kong">
+		</bean>
+
+<bean class="com.springcore.di_using_constructor.Student" name="student1">
+	<constructor-arg>
+	<value>10</value>
+	</constructor-arg>
+	<constructor-arg>
+	<value>Rio</value>
+	</constructor-arg>
+	<constructor-arg>
+	<ref bean="address1"/>
+	</constructor-arg>
+</bean>
+<bean class="com.springcore.di_using_constructor.Student" name="student2">
+	 <constructor-arg index="2" ref="address2"/>
+	 <constructor-arg index="1" value="Berlin"/>
+	 <constructor-arg index="0" value="1"/>
+</bean>
+<bean class="com.springcore.di_using_constructor.Student" name="student3"
+c:studentId="3" c:studentName="Oslo" c:studentAddress-ref="address3"
+/>
+</beans>
