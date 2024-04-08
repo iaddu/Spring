@@ -1,17 +1,15 @@
 package com.springcore.autowiring.annotation;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 
 public class Employee {
 	private String name;
 	private int id;
-	
-	private Address address;
 	@Autowired
-	public Employee(Address address) {
-		 
-		this.address = address;
-	}
+	@Qualifier("add1")
+	private Address address;
+	 
 	public String getName() {
 		return name;
 	}
