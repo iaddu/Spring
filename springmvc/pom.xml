@@ -8,6 +8,14 @@
   <name>springmvc Maven Webapp</name>
   <url>http://maven.apache.org</url>
   <dependencies>
+	    <!-- https://mvnrepository.com/artifact/jstl/jstl -->
+<dependency>
+    <groupId>jstl</groupId>
+    <artifactId>jstl</artifactId>
+    <version>1.2</version>
+</dependency>
+
+
 	<!-- https://mvnrepository.com/artifact/org.springframework/spring-webmvc -->
 <dependency>
     <groupId>org.springframework</groupId>
@@ -21,6 +29,7 @@
       <version>3.8.1</version>
       <scope>test</scope>
     </dependency>
+
   </dependencies>
   <build>
     <finalName>springmvc</finalName>
