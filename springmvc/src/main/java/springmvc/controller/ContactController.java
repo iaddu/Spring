@@ -2,9 +2,11 @@ package springmvc.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
+
+import springmvc.model.User;
 
 @Controller
 public class ContactController {
@@ -34,6 +36,7 @@ public class ContactController {
 		return "";
 	}
 	*/
+	/*
 	//not from this method 2 we send these details to success.jsp
 	@RequestMapping(path="/processForm" , method=RequestMethod.POST)
 	public String handleFrom(@RequestParam("email")String uemail,
@@ -41,6 +44,13 @@ public class ContactController {
 							 Model model){
 		model.addAttribute("useremail", uemail);
 		model.addAttribute("userpass", upass);
+		return "success";
+	}
+	*/
+	//method 2 :using @ModelAttribute
+	@RequestMapping(path="/processForm",method=RequestMethod.POST)
+	public String handleForm(@ModelAttribute User user ,Model model) {
+		model.addAttribute("user",user);
 		return "success";
 	}
 }

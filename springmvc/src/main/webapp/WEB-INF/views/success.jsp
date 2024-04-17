@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+  <%@ page import="springmvc.model.User" %>
+  
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,12 +10,11 @@
 </head>
 <body>
 <%
-String useremail=(String)request.getAttribute("useremail");
-String userpassword=(String)request.getAttribute("userpass");
+User user=(User)request.getAttribute("user");
 %>
 <h1>UserEmail:</h1>
-<%=useremail %>
+<%=user.getEmail()%>
 <h2>UserPassword:</h2>
-<%=userpassword %>
+<%=user.getPass()%>
 </body>
 </html>
