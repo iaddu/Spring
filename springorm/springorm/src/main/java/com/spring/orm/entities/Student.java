@@ -14,6 +14,9 @@ public class Student {
 	private int studentId;
 	@Column(name="student_name")
 	private String studentName;
+
+	@Column(name="student_city")
+	private String studentCity;
 	public int getStudentId() {
 		return studentId;
 	}
@@ -47,7 +50,5 @@ public class Student {
 		return "Student [studentId=" + studentId + ", studentName=" + studentName + ", studentCity=" + studentCity
 				+ "]";
 	}
-	@Column(name="student_city")
-	private String studentCity;
 
 }
