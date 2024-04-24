@@ -10,7 +10,19 @@ public class Student {
 	private List<String> courses;
 	private String gender;
 	private String type;
-	
+	private Address address;
+	public Date getDob() {
+		return dob;
+	}
+	public void setDob(Date dob) {
+		this.dob = dob;
+	}
+	public Address getAddress() {
+		return address;
+	}
+	public void setAddress(Address address) {
+		this.address = address;
+	}
 	public String getName() {
 		return name;
 	}
@@ -49,8 +61,9 @@ public class Student {
 	}
 	@Override
 	public String toString() {
-		return "Student [name=" + name + ", id=" + id + ", date=" + dob + ", courses=" + courses + ", gender=" + gender
-				+ ", type=" + type + "]";
+		return "Student [name=" + name + ", id=" + id + ", dob=" + dob + ", courses=" + courses + ", gender=" + gender
+				+ ", type=" + type + ", address=" + address + "]";
 	}
+	 
 
 }
