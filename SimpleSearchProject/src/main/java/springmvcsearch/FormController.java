@@ -2,6 +2,7 @@ package springmvcsearch;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -14,8 +15,12 @@ public class FormController {
 	}
 	
 	@RequestMapping(path="/handleform",method=RequestMethod.POST)
-	public String formHandler(@ModelAttribute Student student ,Model model)
+	public String formHandler(@ModelAttribute Student student ,BindingResult result,
+			Model model)
 	{
+		if(result.hasErrors()) {
+			return "complex_form";
+		}
 		model.addAttribute("std1",student);
 		System.out.println(student);
 		return "success";
