@@ -22,7 +22,12 @@
     <artifactId>spring-webmvc</artifactId>
     <version>5.3.30</version>
 </dependency>
-
+<dependency>
+    <groupId>javax.servlet</groupId>
+    <artifactId>javax.servlet-api</artifactId>
+    <version>4.0.1</version> <!-- Use the appropriate version -->
+    <scope>provided</scope> <!-- 'provided' indicates this library is available at runtime but not packaged in your WAR -->
+</dependency>
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
