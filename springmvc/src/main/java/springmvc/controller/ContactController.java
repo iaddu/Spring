@@ -41,7 +41,7 @@ public class ContactController {
 	}
 	*/
 	/*
-	//not from this method 2 we send these details to success.jsp
+	//now from this method 2 we send these details to success.jsp
 	@RequestMapping(path="/processForm" , method=RequestMethod.POST)
 	public String handleFrom(@RequestParam("email")String uemail,
 							 @RequestParam("password")String upass,

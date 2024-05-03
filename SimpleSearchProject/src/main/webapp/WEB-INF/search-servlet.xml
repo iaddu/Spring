@@ -32,5 +32,13 @@
 		class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
 		
 	</bean>
+	<bean id="myInterceptor" class="springmvcsearch.MyInterceptor" />
+	<mvc:interceptors>
+    <mvc:interceptor>
+        <mvc:mapping path="/**" />  <!-- Apply to all paths -->
+        <bean class="springmvcsearch.MyInterceptor" />  <!-- The custom interceptor -->
+    </mvc:interceptor>
+</mvc:interceptors>
+	
 	
 </beans>
