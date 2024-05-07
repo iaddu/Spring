@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <style>
+        /* Centering the form on the screen */
+        body {
+            display: flex;
+            justify-content: center; /* Horizontally center content */
+            align-items: center; /* Vertically center content */
+            height: 100vh; /* Full height of the viewport */
+            margin: 0;
+            background-color: #f5f5f5; /* Light background color */
+        }
+
+        .login-container {
+            padding: 20px;
+            background-color: #fff; /* White background */
+            border: 1px solid #ddd; /* Light border */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Drop shadow for depth */
+        }
+
+        /* Aligning label and text field horizontally */
+        .form-group {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px; /* Spacing between form groups */
+        }
+
+        .form-group label {
+            flex: 1; /* Use flex to control label width */
+            text-align: right; /* Align text to the right */
+            margin-right: 10px; /* Space between label and text field */
+        }
+
+        .form-group input {
+            flex: 2; /* Allow text field to be wider than label */
+            padding: 5px; /* Padding for text field */
+            border: 1px solid #ccc; /* Border for text field */
+            border-radius: 4px; /* Rounded corners */
+        }
+
+        .form-group button {
+            padding: 10px 20px; /* Padding for button */
+            background-color: #4CAF50; /* Green background */
+            color: white; /* White text */
+            border: none; /* No border */
+            border-radius: 4px; /* Rounded corners */
+            cursor: pointer; /* Cursor changes to pointer */
+        }
+
+        .form-group button:hover {
+            background-color: #45a049; /* Darker green on hover */
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h2>Login</h2> <!-- Title for the form -->
+        <form action="/home/commonLogin" method="post"> <!-- Form action and method -->
+            <div class="form-group">
+                <label for="email">Email:</label> <!-- Label for email -->
+                <input type="email" id="email" name="email" required> <!-- Email input -->
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label> <!-- Label for password -->
+                <input type="password" id="password" name="password" required> <!-- Password input -->
+            </div>
+            <div class="form-group">
+                <button type="submit">Login</button> <!-- Login button -->
+            </div>
+        </form>
+    </div>
+</body>
+</html>
